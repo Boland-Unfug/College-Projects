@@ -23,7 +23,7 @@ import numpy as np					# matrix math
 import matplotlib.pyplot as plt		# plotting
 from matplotlib import cm			# colormap definitions, e.g. "viridis"
 
-import visualization as vis			# file I/O
+import Visualization as vis			# file I/O
 import statistics as stats
 # import naive_bayes as nb			# naive bayes classification
 import pca as pca			# PCA analysis

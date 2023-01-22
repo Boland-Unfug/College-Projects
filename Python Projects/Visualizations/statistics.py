@@ -19,7 +19,7 @@ Requires visualization.py in the same folder
 '''
 
 
-from visualization import *		# includes numpy, matplotlib, os, and sys
+from Visualization import *		# includes numpy, matplotlib, os, and sys
 import math
 
 # For drawing elliptical patches to represent clusters' standard deviations

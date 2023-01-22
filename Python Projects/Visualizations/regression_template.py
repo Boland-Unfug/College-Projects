@@ -25,7 +25,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 import os
 import sys
-import visualization as vis
+import Visualization as vis
 
 def partition( X, Y, pct_train=0.70 ):
 	'''

@@ -30,7 +30,7 @@ import numpy as np					# matrix math
 import matplotlib.pyplot as plt		# plotting
 from matplotlib import cm			# colormap definitions, e.g. "viridis"
 
-import visualization as vis			# file I/O
+import Visualization as vis			# file I/O
 import regression_poly as reg		# Partitioning
 import statistics as stats			# drawing gaussian ellipses
 

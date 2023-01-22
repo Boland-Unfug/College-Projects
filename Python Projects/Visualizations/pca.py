@@ -17,7 +17,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import sys
-import visualization as vis
+import Visualization as vis
 
 def z_transform( X ):
 	''' Normalize the dataset X by Z-score: subtract the mean and divide by the standard deviation.
