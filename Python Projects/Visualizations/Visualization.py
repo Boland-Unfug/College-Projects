@@ -6,8 +6,8 @@ data in several ways, including a pair plot and a heatmap.
 
 Execution:		>> python3 visualizations.py [path_to_dataset, str] [class_column_header, str]
 	Examples: 		>> python3 visualizations.py 
-					>> python3 visualizations.py ../data/iris.csv
-					>> python3 visualizations.py ../data/iris.csv species
+					>> python3 visualizations.py data/iris.csv
+					>> python3 visualizations.py data/iris.csv species
 
 Requires Numpy and Matplotlib:
 	>> pip install numpy matplotlib
@@ -16,15 +16,12 @@ Requires Numpy and Matplotlib:
 @date 12/20/2021
 '''
 
-from email import header
 import sys							# we can retrieve command line parameters from sys.argv
 import os							# helps adapt filepath formatting for your operating system
 import numpy as np					# represents datasets as ndarrays (matrices)
 import matplotlib.pyplot as plt		# data visualizations, e.g. plot() and imshow()
 import matplotlib.animation as ani
-import ffmpeg
 from matplotlib import cm			# colormap definitions, e.g. "viridis"
-import pca
 
 def histogram (data, headers, title=""):
 
@@ -362,7 +359,7 @@ def main( argv ):
 	if len(argv) > 1:
 		filepath = argv[1].strip()
 	else:
-		#filepath = "../data/iris_preproc.csv"
+		#filepath = "data/iris_preproc.csv"
 		current_directory = os.path.dirname(__file__)
 		filepath = os.path.join(current_directory, "data", "forestfires.csv")
 

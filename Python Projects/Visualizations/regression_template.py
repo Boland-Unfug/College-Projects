@@ -7,12 +7,12 @@ the polynomial degree can be any positive integer.
 
 Execution:		>> python3 regression.py [path_to_dataset, str] ["Y=[Y_feature_name]"] [D=degree] ["X=[X0_feature_name]"] ["X=[X1_feature_name]"] [...] ["X=[Xn_feature_name]"]
 	Examples: 		>> python3 regression.py 
-					>> python3 regression.py ../data/iris_preproc.csv
-					>> python3 regression.py ../data/iris_preproc.csv "Y=petal length (cm)"
-					>> python3 regression.py ../data/iris_preproc.csv "Y=petal length (cm)" D=3
-					>> python3 regression.py ../data/iris_preproc.csv "Y=petal length (cm)" D=3 "X=petal width (cm)"
-					>> python3 regression.py ../data/iris_preproc.csv "Y=petal length (cm)" D=3 "X=petal width (cm)" "X=sepal length (cm)"
-					>> python3 regression.py ../data/iris_preproc.csv "Y=petal length (cm)" D=3 "X=petal width (cm)" "X=sepal length (cm)" X=species
+					>> python3 regression.py data/iris_preproc.csv
+					>> python3 regression.py data/iris_preproc.csv "Y=petal length (cm)"
+					>> python3 regression.py data/iris_preproc.csv "Y=petal length (cm)" D=3
+					>> python3 regression.py data/iris_preproc.csv "Y=petal length (cm)" D=3 "X=petal width (cm)"
+					>> python3 regression.py data/iris_preproc.csv "Y=petal length (cm)" D=3 "X=petal width (cm)" "X=sepal length (cm)"
+					>> python3 regression.py data/iris_preproc.csv "Y=petal length (cm)" D=3 "X=petal width (cm)" "X=sepal length (cm)" X=species
 
 Requires Numpy, Matplotlib, and also requires your own visualization.py to be in the same folder, 
 becuase it uses vis.read_csv() and vis.remove_nans()
@@ -410,7 +410,7 @@ def main( argv ):
 	if len(argv) > 1:
 		filepath = argv[1].strip()
 	else:
-		#filepath = "../data/iris_preproc.csv"
+		#filepath = "data/iris_preproc.csv"
 		current_directory = os.path.dirname(__file__)
 		filepath = os.path.join(current_directory, "data", "iris_preproc.csv")
 

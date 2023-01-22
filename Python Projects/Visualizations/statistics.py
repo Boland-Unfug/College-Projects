@@ -8,8 +8,8 @@ a heatmap.
 
 Execution:		>> python3 statistics.py [path_to_dataset, str] [class_column_header, str]
 	Examples: 		>> python3 statistics.py 
-					>> python3 statistics.py ../data/iris.csv
-					>> python3 statistics.py ../data/iris.csv species
+					>> python3 statistics.py data/iris.csv
+					>> python3 statistics.py data/iris.csv species
 
 Requires visualization.py in the same folder
 
@@ -317,7 +317,7 @@ def main( argv ):
 	if len(argv) > 1:
 		filepath = argv[1].strip()
 	else:
-		#filepath = "../data/iris_preproc.csv"
+		#filepath = "data/iris_preproc.csv"
 		current_directory = os.path.dirname(__file__)
 		filepath = os.path.join(current_directory, "data", "iris_preproc.csv")
 

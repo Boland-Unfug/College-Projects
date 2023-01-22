@@ -4,11 +4,11 @@ classification.py
 Implements K Nearest Neighbors (KNN) and Naive Bayes classification.
 
 Execution:		>> python3 classification.py [path_to_dataset, str] [class_column_header, str] K=[number_neighbors, int] "X=[input_feature_name, str]" "X=[input_feature_name, str]"
-	Examples:		>> python3 classification.py ../data/iris.csv species
-					>> python3 classification.py ../data/iris.csv species K=10
-					>> python3 classification.py ../data/iris.csv species K=5  "X=petal length (cm)"
-					>> python3 classification.py ../data/iris.csv species K=3  "X=petal length (cm)" "X=petal width (cm)"
-					>> python3 classification.py ../data/iris.csv species K=3  "X=petal length (cm)" "X=petal width (cm)" "X=sepal length (cm)"
+	Examples:		>> python3 classification.py data/iris.csv species
+					>> python3 classification.py data/iris.csv species K=10
+					>> python3 classification.py data/iris.csv species K=5  "X=petal length (cm)"
+					>> python3 classification.py data/iris.csv species K=3  "X=petal length (cm)" "X=petal width (cm)"
+					>> python3 classification.py data/iris.csv species K=3  "X=petal length (cm)" "X=petal width (cm)" "X=sepal length (cm)"
 
 Requires visualization.py, knn.py, and naive bayes.py in the same folder
 
@@ -489,7 +489,7 @@ def main( argv ):
 	if len(argv) > 1:
 		filepath = argv[1].strip()
 	else:
-		#filepath = "../data/iris_preproc.csv"
+		#filepath = "data/iris_preproc.csv"
 		current_directory = os.path.dirname(__file__)
 		filepath = os.path.join(current_directory, "..", "data", "iris_preproc.csv")
 

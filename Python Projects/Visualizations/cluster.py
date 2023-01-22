@@ -4,9 +4,9 @@ cluster.py
 Implements K-Means and Expectation Maximization (EM) clustering.
 
 Execution:		>> python3 cluster.py [path_to_dataset, str] [class_column_header, str] K=[number_neighbors, int] "X=[input_feature_name, str]" "X=[input_feature_name, str]"
-	Examples:		>> python3 cluster.py ../data/iris_preproc.csv				# K=2 by default
-					>> python3 cluster.py ../data/iris_preproc.csv K=3			# To find 3 clusters in iris, for example
-					>> python3 cluster.py ../data/iris_preproc.csv K=3  D=2		# To use PCA with 2 PCs, for example
+	Examples:		>> python3 cluster.py data/iris_preproc.csv				# K=2 by default
+					>> python3 cluster.py data/iris_preproc.csv K=3			# To find 3 clusters in iris, for example
+					>> python3 cluster.py data/iris_preproc.csv K=3  D=2		# To use PCA with 2 PCs, for example
 
 Requires visualization.py and pca.py in the same folder
 
@@ -378,7 +378,7 @@ def main( argv ):
 	if len(argv) > 1:
 		filepath = argv[1].strip()
 	else:
-		#filepath = "../data/iris_preproc.csv"
+		#filepath = "data/iris_preproc.csv"
 		current_directory = os.path.dirname(__file__)
 		filepath = os.path.join(current_directory, "data", "iris_preproc.csv")
 

@@ -4,10 +4,10 @@ classification.py
 Implements K Nearest Neighbors (KNN) and Naive Bayes classification.
 
 Execution:		>> python3 classification.py [path_to_dataset, str] "C=[class_column_header, str]" K=[number_neighbors, int] "X=[input_feature_name, str]" "X=[input_feature_name, str]"
-	Examples:		>> python3 classification.py ../data/iris.csv "C=species"
-					>> python3 classification.py ../data/iris.csv "C=species" K=10
-					>> python3 classification.py ../data/iris.csv "C=species" K=5  "X=petal length (cm)"
-					>> python3 classification.py ../data/iris.csv "C=species" K=3  "X=petal length (cm)" "X=petal width (cm)"
+	Examples:		>> python3 classification.py data/iris.csv "C=species"
+					>> python3 classification.py data/iris.csv "C=species" K=10
+					>> python3 classification.py data/iris.csv "C=species" K=5  "X=petal length (cm)"
+					>> python3 classification.py data/iris.csv "C=species" K=3  "X=petal length (cm)" "X=petal width (cm)"
 
 Requires visualization.py and statistics.py in the same folder
 
@@ -504,7 +504,7 @@ def main( argv ):
 	if len(argv) > 1:
 		filepath = argv[1].strip()
 	else:
-		#filepath = "../data/iris_preproc.csv"
+		#filepath = "data/iris_preproc.csv"
 		current_directory = os.path.dirname(__file__)
 		filepath = os.path.join(current_directory, "data", "iris_preproc.csv")
 

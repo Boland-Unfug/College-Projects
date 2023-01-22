@@ -4,8 +4,8 @@ pca.py
 Implements Principal Components Analysis (PCA).
 
 Execution:		>> python3 pca.py [path_to_dataset, str] "C=[class_column_header, str]" D=[number_neighbors, int]
-	Examples:		>> python3 pca.py ../data/iris.csv D=3
-					>> python3 pca.py ../data/iris.csv "C=species" D=2
+	Examples:		>> python3 pca.py data/iris.csv D=3
+					>> python3 pca.py data/iris.csv "C=species" D=2
 
 Requires visualization.py in the same folder
 
@@ -366,7 +366,7 @@ def main( argv ):
 	if len(argv) > 1:
 		filepath = argv[1].strip()
 	else:
-		#filepath = "../data/iris_preproc.csv"
+		#filepath = "data/iris_preproc.csv"
 		current_directory = os.path.dirname(__file__)
 		filepath = os.path.join(current_directory, "..", "data", "iris_preproc.csv")
 
