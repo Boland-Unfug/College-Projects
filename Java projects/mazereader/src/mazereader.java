@@ -28,7 +28,7 @@ public class mazereader {
             imageupload(heatmap, "mazereader/Heatmap.png");
             BufferedImage solution = MazeSolver_HelperFunctions.visualizePath(binerizedmaze, path, window1);
             imageupload(solution, "mazereader/Solution.png");
-
+            
             System.out.println("mapdone");
             Scanner input = new Scanner(System.in);
             System.out.println("end the program? y/n");
@@ -45,42 +45,43 @@ public class mazereader {
 
     public static void imageupload(BufferedImage mazecopy, String Filename) throws Exception {
         File outputfile = new File(Filename);
+        System.out.println(outputfile.exists());
         ImageIO.write(mazecopy, "png", outputfile);
     }
 
     public static BufferedImage imagedownload() throws Exception {
-        Scanner input = new Scanner(System.in);
-        Path inPath = Path.of("mazereader/" + "1.png");
-        System.out.println("Pick a maze from 1-7");
-        int mazename = 1;
-        BufferedImage maze;
-        mazename = input.nextInt();
-        maze = ImageIO.read(new File("mazereader/1.png"));
-        if (mazename == 1) {
-            maze = ImageIO.read(new File("mazereader/1.png"));
-        }
-        if (mazename == 2) {
-            maze = ImageIO.read(new File("mazereader/2.png"));
-        }
-        if (mazename == 3) {
-            maze = ImageIO.read(new File("mazereader/3.jpg"));
-        }
-        if (mazename == 4) {
-            maze = ImageIO.read(new File("mazereader/4.png"));
-        }
-        if (mazename == 5) {
-            maze = ImageIO.read(new File("mazereader/5.png"));
-        }
-        if (mazename == 6) {
-            maze = ImageIO.read(new File("mazereader/6.png"));
-        }
-        if (mazename == 7) {
-            maze = ImageIO.read(new File("mazereader/7.png"));
-        }
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.println("Pick a maze from 1-7");
+            int mazename = 1;
+            BufferedImage maze;
+            mazename = input.nextInt();
+            maze = ImageIO.read(new File("./Java projects/mazereader/src/1.png")); //here is the error, fails to make a path?
+            if (mazename == 1) {
+                maze = ImageIO.read(new File("./Java projects/mazereader/src/1.png"));
+            }
+            if (mazename == 2) {
+                maze = ImageIO.read(new File("./Java projects/mazereader/src/2.png"));
+            }
+            if (mazename == 3) {
+                maze = ImageIO.read(new File("./Java projects/mazereader/src/3.png"));
+            }
+            if (mazename == 4) {
+                maze = ImageIO.read(new File("./Java projects/mazereader/src/4.png"));
+            }
+            if (mazename == 5) {
+                maze = ImageIO.read(new File("./Java projects/mazereader/src/5.png"));
+            }
+            if (mazename == 6) {
+                maze = ImageIO.read(new File("./Java projects/mazereader/src/6.png"));
+            }
+            if (mazename == 7) {
+                maze = ImageIO.read(new File("./Java projects/mazereader/src/7.png"));
+            }
 
-        // ImageOutputStream
-        // ImageIO.write(im, formatName, output)
-        return maze;
+            // ImageOutputStream
+            // ImageIO.write(im, formatName, output)
+            return maze;
+        }
     }
 
     public static int[][] nummap(BufferedImage maze) {
